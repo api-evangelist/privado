@@ -1,0 +1,30 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/Privado-Inc
+note: >-
+  These are Privado's first-party open-source distribution artifacts (the
+  scanner tool and CLI), not API client SDKs. Privado does not publish a public
+  REST API, so no language client libraries exist. Not published to PyPI/npm;
+  distributed via GitHub and an install script. Hence no `SDKs` pointer is
+  emitted (the sdk_count check would be a false signal here).
+packages:
+- language: go
+  registry: github
+  name: privado-cli
+  url: https://github.com/Privado-Inc/privado-cli
+  install: "curl -o- https://raw.githubusercontent.com/Privado-Inc/privado-cli/main/install.sh | bash"
+  official: true
+  description: Go CLI that initiates code scans to identify data flows and privacy issues.
+- language: python
+  registry: github
+  name: privado
+  url: https://github.com/Privado-Inc/privado
+  license: LGPL-3.0
+  official: true
+  description: Open-source static scanning tool to detect data flows, find data-security vulnerabilities, and generate Play Store Data Safety reports.
+- language: scala
+  registry: github
+  name: privado-core
+  url: https://github.com/Privado-Inc/privado-core
+  official: true
+  description: Core scanning engine (Joern-based) that powers the Privado scanner.

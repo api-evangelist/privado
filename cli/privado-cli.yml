@@ -1,0 +1,50 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.privado.ai/getting-started-with-privado/command-reference
+name: Privado CLI
+description: >-
+  Command-line interface that runs the open-source Privado static code scanner
+  to detect personal-data flows, data-security violations, and generate
+  compliance reports (RoPA, Play Store Data Safety). Docker-based; runs locally
+  or in CI/CD. Written in Go (Privado-Inc/privado-cli), orchestrating the
+  Scala scanning engine (privado-core).
+repository: https://github.com/Privado-Inc/privado-cli
+requires:
+- Docker (installed and running)
+install:
+- method: script
+  command: "curl -o- https://raw.githubusercontent.com/Privado-Inc/privado-cli/main/install.sh | bash"
+- method: github-release
+  url: https://github.com/Privado-Inc/privado-cli/releases
+commands:
+- name: scan
+  usage: "privado scan <repository> [flags]"
+  description: Scan a codebase or repository to identify privacy issues and generate compliance reports.
+  flags:
+  - "-c, --config"
+  - "--disable-deduplication"
+  - "-i, --ignore-default-rules"
+  - "--overwrite"
+  - "--skip-dependency-download"
+  - "--upload"
+  - "--skip-upload"
+  - "--debug"
+  - "-h, --help"
+- name: upload
+  usage: "privado upload <repository> [flags]"
+  description: Sync the results of a scan with the Privado Dashboard.
+- name: config
+  usage: "privado config <list/enable/disable>"
+  description: List, enable, or disable telemetry for the Privado CLI.
+- name: update
+  usage: "privado update [flags]"
+  description: Check for the latest release and update the Privado CLI.
+- name: version
+  usage: "privado version [flags]"
+  description: Print the current version of the Privado CLI.
+- name: help
+  usage: "privado help [command]"
+  description: Help for any command in the application.
+output: "<source directory>/.privado/privado.json"
+notes:
+- "No source code is sent to the cloud on upload; only scan results are synced."

@@ -1,8 +1,31 @@
 aid: privado
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/privado.png
 name: Privado
-description: 'Privado is a company surfaced as a portfolio company of insight-partners and added to the
-  API Evangelist network as a stub for enrichment. Sector: devops. This profile is a lead awaiting the
-  enrichment pipeline.'
+description: >-
+  Privado (Privado.ai) is a privacy engineering and data-privacy compliance
+  company that helps engineering and privacy teams build privacy-first
+  products. Its flagship is an open-source static code-analysis scanner that
+  detects personal-data flows in source code, finds data-security violations,
+  and generates compliance artifacts such as RoPA and Google Play Store Data
+  Safety reports. The scanner runs locally or in CI/CD (Docker-based) via the
+  Privado CLI, and results can optionally sync to the Privado Cloud dashboard
+  where products like Wren (an AI privacy analyst), Agentic Assessments,
+  Dynamic Data Maps, Web Auditor, and App Auditor automate data mapping and
+  privacy impact assessments. Privado is a DevSecOps / privacy-governance tool
+  rather than a public REST API provider; its developer surface is the
+  open-source scanner, the CLI, and the docs at docs.privado.ai. Backed by
+  Insight Partners.
 url: https://raw.githubusercontent.com/api-evangelist/privado/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,10 +35,19 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
 - Devops
+- Privacy
+- Data Privacy
+- Security
+- DevSecOps
+- Code Scanning
+- Static Analysis
+- Compliance
+- Governance
+- Privacy Engineering
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -24,4 +56,37 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://privadovpn.com/
+  url: https://www.privado.ai/
+- type: Documentation
+  url: https://docs.privado.ai/
+- type: GettingStarted
+  url: https://docs.privado.ai/getting-started-with-privado/getting-started-with-privado
+- type: Support
+  url: https://help.privado.ai/en
+- type: GitHubOrganization
+  url: https://github.com/Privado-Inc
+- type: Blog
+  url: https://www.privado.ai/blog
+- type: Pricing
+  url: https://www.privado.ai/pricing
+- type: PrivacyPolicy
+  url: https://docs.privado.ai/about-privado/privacy
+- type: LLMsTxt
+  url: llms/privado-llms.txt
+- type: CLI
+  url: cli/privado-cli.yml
+- type: Packages
+  url: packages/privado-packages.yml
+- type: ChangeLog
+  url: changelog/privado-changelog.yml
+- type: VulnerabilityDisclosure
+  url: security/privado-vulnerability-disclosure.yml
+- type: Security
+  url: security/privado-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/privado-domain-security.yml
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 6
+  pass: local-v1
